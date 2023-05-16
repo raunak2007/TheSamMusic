@@ -68,6 +68,15 @@
           // Add more tracks as needed
         ]
       },
+      {
+        name: 'Post Malone',
+        genre: 'Hip Hop',
+        tracks: [
+          { title: 'Circles', artist: 'Post Malone' },
+          { title: 'Rockstar', artist: 'Post Malone ft. 21 Savage' },
+          // Add more tracks as needed
+        ]
+      },
       // Add more playlists as needed
     ];
     // Function to render the playlists on the frontend
