@@ -100,10 +100,8 @@
         playlistContainer.appendChild(playlistItem);
       });
     }
-    // Prompt to add a new playlist
-    function addPlaylist() {
-      const playlistName = prompt('Enter the playlist name:');
-      const playlistGenre = prompt('Enter the playlist genre:');
-      const playlist = {
-        name: playlistName,
-        genre: playlistGenre,
+    // Call the renderPlaylists function to populate the frontend with playlists
+    renderPlaylists();
+  </script>
+</body>
+</html>
