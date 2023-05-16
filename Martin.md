@@ -51,11 +51,11 @@
     // Example playlist data
     const playlists = [
       {
-        name: 'Workout Mix',
+        name: 'Workout',
         genre: 'Pop',
         tracks: [
-          { title: 'Track 1', artist: 'Artist 1' },
-          { title: 'Track 2', artist: 'Artist 2' },
+          { title: 'Believer', artist: 'Imagine Dragons' },
+          { title: 'Thunder', artist: 'Imagine Dragons' },
           // Add more tracks as needed
         ]
       },
@@ -63,21 +63,20 @@
         name: 'Chill Vibes',
         genre: 'Electronic',
         tracks: [
-          { title: 'Track 3', artist: 'Artist 3' },
-          { title: 'Track 4', artist: 'Artist 4' },
+          { title: 'Summer', artist: 'Calvin Harris' },
+          { title: 'Sunflower', artist: 'Post Malone & Swae Lee' },
           // Add more tracks as needed
         ]
       },
       {
-        name: 'Post Malone',
-        genre: 'Hip Hop',
+        name: 'Party Mix',
+        genre: 'Pop',
         tracks: [
-          { title: 'Circles', artist: 'Post Malone' },
-          { title: 'Rockstar', artist: 'Post Malone ft. 21 Savage' },
+          { title: 'Dance Monkey', artist: 'Tones and I' },
+          { title: 'Blinding Lights', artist: 'The Weeknd' },
           // Add more tracks as needed
         ]
       },
-      // Add more playlists as needed
     ];
     // Function to render the playlists on the frontend
     function renderPlaylists() {
