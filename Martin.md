@@ -1,99 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Music Playlist Manager</title>
+  <title>Playlist Manager</title>
   <style>
-    /* CSS styles for the frontend interface */
-    /* Add your own styles and customize as needed */
+    /* Add some basic styling */
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
     }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
+    
+    h1 {
       text-align: center;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
+    
+    .playlist-form {
+      text-align: center;
+      margin-bottom: 20px;
     }
+    
     .playlist-item {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 10px;
+      display: flex;
+      align-items: center;
       margin-bottom: 10px;
     }
-    .playlist-item:hover {
-      background-color: #F5F5F5;
+    
+    .playlist-item input[type="text"] {
+      flex: 1;
+      margin-right: 10px;
     }
-    .playlist-item h3 {
-      margin-top: 0;
-    }
-    .playlist-item p {
-      margin-bottom: 0;
+    
+    .playlist-item button {
+      margin-left: 10px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Music Playlist Manager</h1>
-  </header>
-  <div class="container">
-    <h2>My Playlists</h2>
-    <div id="playlist-container"></div>
+  <h1>Playlist Manager</h1>
+  
+  <div class="playlist-form">
+    <input type="text" id="playlist-input" placeholder="Enter playlist name">
+    <button onclick="addPlaylist()">Add Playlist</button>
   </div>
+  
+  <div id="playlist-container"></div>
+
   <script>
-    // JavaScript code to interact with the backend and populate the playlists
-    // Example playlist data
-    const playlists = [
-      {
-        name: 'Workout Mix',
-        genre: 'Pop',
-        tracks: [
-          { title: 'Track 1', artist: 'Artist 1' },
-          { title: 'Track 2', artist: 'Artist 2' },
-          // Add more tracks as needed
-        ]
-      },
-      {
-        name: 'Chill Vibes',
-        genre: 'Electronic',
-        tracks: [
-          { title: 'Track 3', artist: 'Artist 3' },
-          { title: 'Track 4', artist: 'Artist 4' },
-          // Add more tracks as needed
-        ]
-      },
-      // Add more playlists as needed
-    ];
-    // Function to render the playlists on the frontend
-    function renderPlaylists() {
+    // Initialize an empty array to store the playlists
+    let playlists = [];
+    
+    function addPlaylist() {
+      // Get the playlist name from the input field
+      const playlistInput = document.getElementById('playlist-input');
+      const playlistName = playlistInput.value;
+      
+      // Create a new playlist object
+      const playlist = { name: playlistName, songs: [] };
+      
+      // Add the new playlist to the array
+      playlists.push(playlist);
+      
+      // Clear the input field
+      playlistInput.value = '';
+      
+      // Refresh the playlist display
+      displayPlaylists();
+    }
+    
+    function displayPlaylists() {
       const playlistContainer = document.getElementById('playlist-container');
-      playlists.forEach(playlist => {
+      
+      // Clear the playlist container
+      playlistContainer.innerHTML = '';
+      
+      // Loop through the playlists array and create HTML elements for each playlist
+      playlists.forEach(function(playlist) {
         const playlistItem = document.createElement('div');
         playlistItem.classList.add('playlist-item');
-        const playlistTitle = document.createElement('h3');
-        playlistTitle.textContent = playlist.name;
-        const playlistGenre = document.createElement('p');
-        playlistGenre.textContent = `Genre: ${playlist.genre}`;
-        const playlistTracks = document.createElement('ul');
-        playlist.tracks.forEach(track => {
-          const trackItem = document.createElement('li');
-          trackItem.textContent = `${track.title} - ${track.artist}`;
-          playlistTracks.appendChild(trackItem);
+        
+        const playlistName = document.createElement('span');
+        playlistName.textContent = playlist.name;
+        
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', function() {
+          deletePlaylist(playlist);
         });
-        playlistItem.appendChild(playlistTitle);
-        playlistItem.appendChild(playlistGenre);
-        playlistItem.appendChild(playlistTracks);
+        
+        playlistItem.appendChild(playlistName);
+        playlistItem.appendChild(deleteButton);
+        
         playlistContainer.appendChild(playlistItem);
       });
     }
-    // Call the renderPlaylists function to populate the frontend with playlists
-    renderPlaylists();
+    
+    function deletePlaylist(playlist) {
+      // Find the index of the playlist in the array
+      const index = playlists.indexOf(playlist);
+      
+      // Remove the playlist from the array
+      playlists.splice(index, 1);
+      
+      // Refresh the playlist display
+      displayPlaylists();
+    }
   </script>
 </body>
 </html>
