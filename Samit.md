@@ -25,104 +25,165 @@ As the project manager for our music storing software project, my role is crucia
 - So far I have created the log-in page, and plan on fixing the "sign-up" page as well. 
 - I am also working on the search feature, and the template code for that may be seen below.
 
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Music Search</title>
+  <title>Playlist Manager</title>
   <style>
     body {
-      background-color: #f1f1f1;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      margin: 20px;
     }
-    
-    header {
-      background-color: #333333;
-      padding: 20px;
+
+    h1 {
       text-align: center;
     }
-    
-    header h1 {
-      color: #ffffff;
-      margin: 0;
-    }
-    
-    main {
-      padding: 20px;
-    }
-    
-    .container {
-      background-color: #ffffff;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    
-    form {
+
+    .search-container {
       display: flex;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 20px;
     }
-    
-    input[type="text"] {
-      flex: 1;
-      border: 1px solid #ccc;
-      border-radius: 3px;
+
+    .search-input {
       padding: 10px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
       font-size: 16px;
     }
-    
-    button[type="submit"] {
-      background-color: #4CAF50;
-      border: none;
-      border-radius: 3px;
-      color: white;
-      cursor: pointer;
-      font-size: 16px;
+
+    .search-button {
       padding: 10px 20px;
       margin-left: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
     }
-    
-    #searchResults {
-      margin-top: 20px;
+
+    #playlist {
+      list-style-type: none;
+      padding: 0;
     }
-    
-    /* Additional styling for search results */
-    .result-item {
+
+    .song-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: move;
       padding: 10px;
-      border-bottom: 1px solid #ccc;
+      background-color: #f2f2f2;
+      border-radius: 4px;
     }
-    
-    .result-item:last-child {
-      border-bottom: none;
+
+    .song-item:hover {
+      background-color: #e0e0e0;
     }
-    
-    .result-item:hover {
-      background-color: #f9f9f9;
+
+    .song-item img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .song-title {
+      font-weight: bold;
+      color: black;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Music Search</h1>
-  </header>
-  <main>
-    <div class="container">
-      <form>
-        <input type="text" id="searchInput" placeholder="Search for music...">
-        <button type="submit">Search</button>
-      </form>
-      <div id="searchResults"></div>
-    </div>
-  </main>
-  <script src="script.js"></script>
+  <h1>Playlist Manager</h1>
+
+  <div class="search-container">
+    <input type="text" id="search-input" class="search-input" placeholder="Search for a song...">
+    <button id="search-button" class="search-button">Search</button>
+  </div>
+
+  <ul id="playlist">
+    <!-- Song items will be dynamically added here -->
+  </ul>
+
+  <script>
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const playlist = document.getElementById('playlist');
+
+    searchButton.addEventListener('click', () => {
+      const searchTerm = searchInput.value;
+      searchSongs(searchTerm);
+    });
+
+    function searchSongs(searchTerm) {
+      // You can make a request to your backend API or directly to the Spotify API for song search
+      // Replace the code below with your actual API request
+      const songs = [
+        { title: "Circles - Post Malone", image: "https://source.unsplash.com/random/40x40" },
+        { title: "God's Plan - Drake", image: "https://source.unsplash.com/random/40x40" },
+        { title: "XO TOUR Llif3 - Lil Uzi Vert", image: "https://source.unsplash.com/random/40x40" },
+        { title: "Blinding Lights - The Weeknd", image: "https://source.unsplash.com/random/40x40" }
+      ];
+
+      displaySearchResults(songs);
+    }
+
+    function displaySearchResults(songs) {
+      playlist.innerHTML = '';
+
+      songs.forEach(song => {
+        const songItem = document.createElement('li');
+        songItem.className = 'song-item';
+
+        const songImage = document.createElement('img');
+        songImage.src = song.image;
+        songItem.appendChild(songImage);
+
+        const songTitle = document.createElement('span');
+        songTitle.className = 'song-title';
+        songTitle.textContent = song.title;
+        songItem.appendChild(songTitle);
+
+        playlist.appendChild(songItem);
+      });
+    }
+
+    let draggedItem = null;
+
+    function dragStart(event) {
+      draggedItem = event.target;
+      event.dataTransfer.effectAllowed = 'move';
+    }
+
+    function dragOver(event) {
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'move';
+    }
+
+    function drop(event) {
+      event.preventDefault();
+
+      // Move the dragged item to the drop target
+      const dropTarget = event.target;
+      if (dropTarget.classList.contains('song-item')) {
+        const parent = dropTarget.parentNode;
+        const temp = document.createElement('div');
+        parent.insertBefore(temp, dropTarget);
+        parent.insertBefore(draggedItem, temp);
+        parent.removeChild(temp);
+      }
+    }
+  </script>
 </body>
 </html>
 
 
-<!DOCTYPE html>
+
+
 <html>
 <head>
   <title>Music Playlist</title>
@@ -235,3 +296,103 @@ As the project manager for our music storing software project, my role is crucia
   </script>
 </body>
 </html>
+
+
+<html>
+<head>
+  <title>Playlist Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #playlist {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .song-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: move;
+      padding: 10px;
+      background-color: #f2f2f2;
+      border-radius: 4px;
+    }
+
+    .song-item:hover {
+      background-color: #e0e0e0;
+    }
+
+    .song-item img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .song-title {
+      font-weight: bold;
+      color: black; /* Set font color to black */
+    }
+  </style>
+</head>
+<body>
+  <h1>Playlist Manager</h1>
+
+  <ul id="playlist">
+    <li class="song-item" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondrop="drop(event)">
+      <img src="https://source.unsplash.com/random/40x40" alt="Song 1">
+      <span class="song-title">Circles - Post Malone</span>
+    </li>
+    <li class="song-item" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondrop="drop(event)">
+      <img src="https://source.unsplash.com/random/40x40" alt="Song 2">
+      <span class="song-title">God's Plan - Drake</span>
+    </li>
+    <li class="song-item" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondrop="drop(event)">
+      <img src="https://source.unsplash.com/random/40x40" alt="Song 3">
+      <span class="song-title">XO TOUR Llif3 - Lil Uzi Vert</span>
+    </li>
+    <li class="song-item" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondrop="drop(event)">
+      <img src="https://source.unsplash.com/random/40x40" alt="Song 4">
+      <span class="song-title">Blinding Lights - The Weeknd</span>
+    </li>
+  </ul>
+
+  <script>
+    let draggedItem = null;
+
+    function dragStart(event) {
+      draggedItem = event.target;
+      event.dataTransfer.effectAllowed = 'move';
+    }
+
+    function dragOver(event) {
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'move';
+    }
+
+    function drop(event) {
+      event.preventDefault();
+
+      // Move the dragged item to the drop target
+      const dropTarget = event.target;
+      if (dropTarget.classList.contains('song-item')) {
+        const parent = dropTarget.parentNode;
+        const temp = document.createElement('div');
+        parent.insertBefore(temp, dropTarget);
+        parent.insertBefore(draggedItem, temp);
+        parent.removeChild(temp);
+      }
+    }
+  </script>
+</body>
+</html>
+
+
