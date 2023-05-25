@@ -110,12 +110,6 @@
 
 
 
-
-
-
-
-
-<!DOCTYPE html>
 <html>
 <head>
     <title>Music Player Sorting</title>
