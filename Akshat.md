@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> baff856e267fbbfd4f5cef2ea22b0d3ee9cc44d4
 <div data-aos="fade-right">
 <h2>Musical Preference Quiz</h2>
 <div id="question1">
@@ -164,7 +168,11 @@ function removeMusicGenres(likesFast, likesSlow, likesInstrumental, likesElectro
 
 
   if (likesLyrical) {
+<<<<<<< HEAD
     musicList = musicList.filter(genre => genre !== "EDM" && genre !== "K-POP" && genre !== "Funk" && genre !== "Salsa" && genre !== "Heavy Metal" && genre !== "Upbeat" && genre !== "Poprock" && genre !== "Hawaiian/Islander Music");
+=======
+    musicList = musicList.filter(genre => genre !== "EDM" && genre !== "K-POP" && genre !== "Funk" && genre !== "Salsa" && genre !== "Heavy Metal" && genre !== "Upbeat" && genre !== "Poprock" && genre !== Hawaiian/Islander Music");
+>>>>>>> baff856e267fbbfd4f5cef2ea22b0d3ee9cc44d4
   }
 }
 // The result of the function
@@ -172,4 +180,7 @@ document.getElementById("result").innerHTML = "Based on your answers, we recomme
 
 
 </script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> baff856e267fbbfd4f5cef2ea22b0d3ee9cc44d4
