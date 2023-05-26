@@ -176,7 +176,7 @@
             musicListDiv.appendChild(musicItemDiv);
         }
     }
-    displayMusic();
+    // displayMusic();
     </script>
 </body>
 </html>
