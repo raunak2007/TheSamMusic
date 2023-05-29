@@ -1,297 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Music Playlist Manager</title>
+  <title>Playlist</title>
   <style>
-    /* CSS styles for the frontend interface */
-    /* Add your own styles and customize as needed */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+    table {
+      width: 100%;
+      border-collapse: collapse;
     }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .playlist-item {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-    .playlist-item:hover {
-      background-color: #F5F5F5;
-    }
-    .playlist-item h3 {
-      margin-top: 0;
-    }
-    .playlist-item p {
-      margin-bottom: 0;
+
+    th {
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Music Playlist Manager</h1>
-  </header>
-  <div class="container">
-    <h2>My Playlists</h2>
-    <div id="playlist-container"></div>
-  </div>
-  <script>
-    // JavaScript code to interact with the backend and populate the playlists
-    // Example playlist data
-    const playlists = [
-      {
-        name: 'Workout',
-        genre: 'Pop',
-        tracks: [
-          { title: 'Believer', artist: 'Imagine Dragons' },
-          { title: 'Thunder', artist: 'Imagine Dragons' },
-          // Add more tracks as needed
-        ]
-      },
-      {
-        name: 'Chill Vibes',
-        genre: 'Electronic',
-        tracks: [
-          { title: 'Summer', artist: 'Calvin Harris' },
-          { title: 'Sunflower', artist: 'Post Malone & Swae Lee' },
-          // Add more tracks as needed
-        ]
-      },
-      {
-        name: 'Party Mix',
-        genre: 'Pop',
-        tracks: [
-          { title: 'Dance Monkey', artist: 'Tones and I' },
-          { title: 'Blinding Lights', artist: 'The Weeknd' },
-          // Add more tracks as needed
-        ]
-      },
-    ];
-    // Function to render the playlists on the frontend
-    function renderPlaylists() {
-      const playlistContainer = document.getElementById('playlist-container');
-      playlists.forEach(playlist => {
-        const playlistItem = document.createElement('div');
-        playlistItem.classList.add('playlist-item');
-        const playlistTitle = document.createElement('h3');
-        playlistTitle.textContent = playlist.name;
-        const playlistGenre = document.createElement('p');
-        playlistGenre.textContent = `Genre: ${playlist.genre}`;
-        const playlistTracks = document.createElement('ul');
-        playlist.tracks.forEach(track => {
-          const trackItem = document.createElement('li');
-          trackItem.textContent = `${track.title} - ${track.artist}`;
-          playlistTracks.appendChild(trackItem);
-        });
-        playlistItem.appendChild(playlistTitle);
-        playlistItem.appendChild(playlistGenre);
-        playlistItem.appendChild(playlistTracks);
-        playlistContainer.appendChild(playlistItem);
-      });
-    }
-    // Call the renderPlaylists function to populate the frontend with playlists
-    renderPlaylists();
-  </script>
-</body>
-</html>
-
-
-<html>
-<head>
-    <title>Music Player Sorting</title>
-    <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #F5F5F5;
-    }
-    h1 {
-        color: #5A5A5A;
-    }
-    #musicList {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    .musicItem {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 1px solid #ccc;
-        padding: 10px;
-        width: 300px;
-        border-radius: 10px;
-    }
-    button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        border: none;
-        background-color: #555;
-        color: #fff;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    button:hover {
-        background-color: #444;
-    }
-    </style>
-</head>
-<body>
-    <h1>Music Player</h1>
-    <div id="musicList">
-        <!-- The list of songs will be inserted here -->
-    </div>
-    <button onclick="sortMusic()">Sort by duration</button>
-    <script>
-    var musicList = [
-        {title: 'Mood', artist: 'Ian Dior', duration: 189},
-        {title: 'Gone Girl', artist: 'Ian Dior', duration: 158},
-        {title: 'Prospect', artist: 'Ian Dior', duration: 173},
-        {title: '18', artist: 'Ian Dior', duration: 199},
-        {title: 'Holding On', artist: 'Ian Dior', duration: 186},
-    ];
-    function sortMusic() {
-        musicList.sort((a, b) => a.duration - b.duration);
-        displayMusic();
-    }
-    function displayMusic() {
-        var musicListDiv = document.getElementById('musicList');
-        musicListDiv.innerHTML = '';
-        for (var i = 0; i < musicList.length; i++) {
-            var musicItemDiv = document.createElement('div');
-            musicItemDiv.className = 'musicItem';
-            musicItemDiv.innerHTML = `<span>${musicList[i].title} by ${musicList[i].artist}</span><span>${musicList[i].duration} seconds</span>`;
-            musicListDiv.appendChild(musicItemDiv);
-        }
-    }
-    displayMusic();
-    </script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Playlist Manager</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    #playlist {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .song-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      cursor: move;
-      padding: 10px;
-      background-color: #f2f2f2;
-      border-radius: 4px;
-    }
-
-    .song-item:hover {
-      background-color: #e0e0e0;
-    }
-
-    .song-item img {
-      width: 40px;
-      height: 40px;
-      margin-right: 10px;
-      border-radius: 50%;
-    }
-
-    .song-title {
-      font-weight: bold;
-      color: black; /* Set font color to black */
-    }
-  </style>
-</head>
-<body>
-  <h1>Playlist Manager</h1>
-
-  <table id="musicTable">
+  <h1>Playlist</h1>
+  <table id="playlist">
     <thead>
       <tr>
-        <th onclick="sortTable('title')">Title</th>
-        <th onclick="sortTable('artist')">Artist</th>
-        <th onclick="sortTable('duration')">Duration (seconds)</th>
+        <th onclick="sortTable(0)">Artist</th>
+        <th onclick="sortTable(1)">Title</th>
+        <th onclick="sortTable(2)">Date</th>
+        <th onclick="sortTable(3)">Duration</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Rockstar</td>
+        <td>Iann Dior</td>
+        <td>Songs</td>
+        <td>2022-01-15</td>
+        <td>3:20</td>
+      </tr>
+      <tr>
         <td>Post Malone</td>
-        <td>218</td>
-      </tr>
-      <tr>
-        <td>God's Plan</td>
-        <td>Drake</td>
-        <td>198</td>
-      </tr>
-      <tr>
-        <td>Stronger</td>
-        <td>Kanye West</td>
-        <td>311</td>
-      </tr>
-      <tr>
-        <td>Mask Off</td>
-        <td>Future</td>
-        <td>227</td>
-      </tr>
-      <tr>
         <td>Circles</td>
-        <td>Post Malone</td>
-        <td>215</td>
+        <td>2019-08-30</td>
+        <td>3:34</td>
       </tr>
       <tr>
-        <td>One Dance</td>
-        <td>Drake</td>
-        <td>173</td>
+        <td>Taylor Swift</td>
+        <td>Love Story</td>
+        <td>2008-09-12</td>
+        <td>3:55</td>
       </tr>
       <tr>
-        <td>Heartless</td>
-        <td>Kanye West</td>
-        <td>228</td>
+        <td>Billie Eilish</td>
+        <td>Bad Guy</td>
+        <td>2019-03-29</td>
+        <td>3:14</td>
       </tr>
       <tr>
-        <td>Low Life</td>
-        <td>Future</td>
-        <td>315</td>
+        <td>Ed Sheeran</td>
+        <td>Shape of You</td>
+        <td>2017-01-06</td>
+        <td>3:53</td>
+      </tr>
+      <tr>
+        <td>Ariana Grande</td>
+        <td>Thank U, Next</td>
+        <td>2018-11-03</td>
+        <td>3:27</td>
       </tr>
     </tbody>
   </table>
 
   <script>
-    // Function to sort the table based on the selected column
-    function sortTable(columnName) {
-      const table = document.getElementById('musicTable');
-      const rows = Array.from(table.tBodies[0].getElementsByTagName('tr'));
-      const headerRow = table.getElementsByTagName('thead')[0].getElementsByTagName('tr')[0];
-      const isAscending = !headerRow.classList.contains('asc');
-      
-      rows.sort((rowA, rowB) => {
-        const cellA = rowA.querySelector(`td:nth-child(${getColumnIndex(columnName)})`).innerText;
-        const cellB = rowB.querySelector(`td:nth-child(${getColumnIndex(columnName)})`).innerText;
-        
-        return is
+    function sortTable(columnIndex) {
+      var table, rows, switching, i, x, y, shouldSwitch;
+      table = document.getElementById("playlist");
+      switching = true;
+
+      while (switching) {
+        switching = false;
+        rows = table.getElementsByTagName("tr");
+
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false;
+
+          x = rows[i].getElementsByTagName("td")[columnIndex];
+          y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+        }
+      }
+    }
+  </script>
+</body>
+</html>
