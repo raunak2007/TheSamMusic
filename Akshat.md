@@ -1,4 +1,3 @@
-
 <div data-aos="fade-right">
 <h2>Musical Preference Quiz</h2>
 <div id="question1">
@@ -39,7 +38,7 @@
 
 
 <div data-aos="fade-right">
-<h3>Which music preference will you like to pursue?</h3>
+<h3>Which music preference would you like to talk about?</h3>
 <select id="music-select">
   <option>90's Hip-Hop</option>
   <option>Rock N Roll</option>
@@ -165,7 +164,7 @@ function removeMusicGenres(likesFast, likesSlow, likesInstrumental, likesElectro
 
 
   if (likesLyrical) {
-    musicList = musicList.filter(genre => genre !== "EDM" && genre !== "K-POP" && genre !== "Funk" && genre !== "Salsa" && genre !== "Heavy Metal" && genre !== "Upbeat" && genre !== "Poprock" && genre !== Hawaiian/Islander Music");
+    musicList = musicList.filter(genre => genre !== "EDM" && genre !== "K-POP" && genre !== "Funk" && genre !== "Salsa" && genre !== "Heavy Metal" && genre !== "Upbeat" && genre !== "Poprock" && genre !== "Hawaiian/Islander Music");
   }
 }
 // The result of the function
@@ -173,3 +172,145 @@ document.getElementById("result").innerHTML = "Based on your answers, we recomme
 
 
 </script>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: white;
+  resize: none;
+  min-height: 200px;
+}
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+/* Add the new rule here */
+.form-container h1 {
+  color: black;
+}
+/* Add the new rule here */
+.form-container label {
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<h2>Talk Music with SAM</h2>
+<p>Click on the button at the bottom of this page to open the chat form.</p>
+<p>Your message will be stored below! Talk Music CONVO!!!! Enjoy!</p>
+<hr>
+<button class="open-button" onclick="openForm()">Chat with SAM</button>
+
+<div class="chat-popup" id="myForm">
+  <form class="form-container" onsubmit="event.preventDefault(); sendMessage();">
+    <h1>Chat with SAM</h1>
+    <label for="msg"><b>Message</b></label>
+    <textarea id="message-input" placeholder="Type message.." name="msg" required></textarea>
+    <button type="submit" class="btn">Send with SAM</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close SAM</button>
+  </form>
+</div>
+
+<div id="message-container">
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function sendMessage() {
+  const messageInput = document.getElementById("message-input");
+  const message = 'CSP Period 5 User Says: ' + messageInput.value;
+  
+  const messages = JSON.parse(localStorage.getItem('messages') || '[]');
+  messages.push(message);
+  localStorage.setItem('messages', JSON.stringify(messages));
+
+  displayMessage(message);
+  messageInput.value = '';
+}
+
+function displayMessage(message) {
+  const messageContainer = document.getElementById("message-container");
+  const messageElement = document.createElement("p");
+  messageElement.textContent = message;
+  messageContainer.appendChild(messageElement);
+}
+// Fetch messages from localStorage and display them
+const storedMessages = JSON.parse(localStorage.getItem('messages') || '[]');
+storedMessages.forEach(displayMessage);
+
+// Add the event listener to the message input field
+document.getElementById("message-input").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    sendMessage();
+  }
+});
+</script>
+
+</body>
+</html>
+
