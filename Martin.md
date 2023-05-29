@@ -180,3 +180,118 @@
     </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Playlist Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #playlist {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .song-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: move;
+      padding: 10px;
+      background-color: #f2f2f2;
+      border-radius: 4px;
+    }
+
+    .song-item:hover {
+      background-color: #e0e0e0;
+    }
+
+    .song-item img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .song-title {
+      font-weight: bold;
+      color: black; /* Set font color to black */
+    }
+  </style>
+</head>
+<body>
+  <h1>Playlist Manager</h1>
+
+  <table id="musicTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable('title')">Title</th>
+        <th onclick="sortTable('artist')">Artist</th>
+        <th onclick="sortTable('duration')">Duration (seconds)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rockstar</td>
+        <td>Post Malone</td>
+        <td>218</td>
+      </tr>
+      <tr>
+        <td>God's Plan</td>
+        <td>Drake</td>
+        <td>198</td>
+      </tr>
+      <tr>
+        <td>Stronger</td>
+        <td>Kanye West</td>
+        <td>311</td>
+      </tr>
+      <tr>
+        <td>Mask Off</td>
+        <td>Future</td>
+        <td>227</td>
+      </tr>
+      <tr>
+        <td>Circles</td>
+        <td>Post Malone</td>
+        <td>215</td>
+      </tr>
+      <tr>
+        <td>One Dance</td>
+        <td>Drake</td>
+        <td>173</td>
+      </tr>
+      <tr>
+        <td>Heartless</td>
+        <td>Kanye West</td>
+        <td>228</td>
+      </tr>
+      <tr>
+        <td>Low Life</td>
+        <td>Future</td>
+        <td>315</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    // Function to sort the table based on the selected column
+    function sortTable(columnName) {
+      const table = document.getElementById('musicTable');
+      const rows = Array.from(table.tBodies[0].getElementsByTagName('tr'));
+      const headerRow = table.getElementsByTagName('thead')[0].getElementsByTagName('tr')[0];
+      const isAscending = !headerRow.classList.contains('asc');
+      
+      rows.sort((rowA, rowB) => {
+        const cellA = rowA.querySelector(`td:nth-child(${getColumnIndex(columnName)})`).innerText;
+        const cellB = rowB.querySelector(`td:nth-child(${getColumnIndex(columnName)})`).innerText;
+        
+        return is
