@@ -30,19 +30,7 @@
     <div id="existingPlaylists">
     </div>
     <div id="playlistBox">
-        <div>
-            <h2>Add playlist</h2>
-            <form id="aplaylist">
-                <input required placeholder="Playlist" id="playlist_name" />
-                <input required placeholder="Duration" id="duration" />
-                <input required placeholder="Title" id="title" />
-                <input required placeholder="Year" id="year" />
-                <input required placeholder="Age" id="age" />
-                <input required placeholder="Rating" id="rating" />
-                <textarea required placeholder="Artist" id="artist"></textarea>
-                <button type="submit" onclick="addPlaylist()">Add Playlist</button>
-            </form>
-        </div>
+        
     </div>
 
     <script>
