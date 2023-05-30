@@ -1,3 +1,5 @@
+**Look through our playlists and sort based on what you are looking for!**
+**We have playlists called Chill, Vibe, and Hype so far... starting looking through them to add to your own personal playlists!**
 <html lang="en">
 <head>
     <title>Playlist Management</title>
