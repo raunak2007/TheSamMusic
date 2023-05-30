@@ -3,7 +3,7 @@
     <title>Playlist Management</title>
 </head>
 <body>
-    <h1>Playlist Management</h1>
+    <h1>Playlist Management</h1> 
     <i>Enter the name of a playlist to get started</i>
     <input placeholder="Playlist" id="play" />
     <p>If you already have a saved playlist, enter its name above and hit "load playlist"</p>
@@ -12,10 +12,10 @@
         <tr>
             <th>ID</th>
             <th>Playlist</th>
-            <th>Duration</th>
+            <th id="durationHeader" onclick="sortTableByDuration()">Duration</th>
             <th>Year</th>
             <th id="ageHeader" onclick="sortTableByAge()">Age</th>
-            <th>Rating</th>
+            <th id="ratingHeader" onclick="sortTableByRating()">Rating</th>
             <th>Artist</th>
             <th>Title</th>
         </tr>
@@ -48,6 +48,7 @@
         const previewPlaylist = (playlist) => {
             document.getElementById("PlaylistName").innerHTML = "Playlist Name: " + playlist.playlist_name;
             document.getElementById("Duration").innerHTML = "Duration: " + playlist.duration;
+            document.getElementById("Title").innerHTML = "Title: " + playlist.title;
             document.getElementById("Year").innerHTML = "Year: " + playlist.year;
             document.getElementById("Age").innerHTML = "Age: " + playlist.age;
             document.getElementById("Rating").innerHTML = "Rating: " + playlist.rating + " stars";
@@ -63,7 +64,7 @@
             const age = document.getElementById("age").value;
             const rating = document.getElementById("rating").value;
             const artist = document.getElementById("artist").value;
-
+            console.log(title);
             if (play === "") {
                 alert("Invalid playlist!");
                 return;
@@ -84,6 +85,8 @@
                 },
                 body: JSON.stringify(data),
             };
+
+            console.log(JSON.stringify(data));
             try {
                 fetch(`http://localhost:8086/playlist`, requestOptions)
                     .then(response => response.json())
@@ -181,6 +184,64 @@
             // Add sorting indicator
             const ageHeaderCell = document.getElementById("ageHeader");
             ageHeaderCell.innerHTML += '<span class="sort-indicator">&#x25B2;</span>';
+        };
+
+        const sortTableByDuration = () => {
+            const table = document.querySelector(".teams");
+            const rows = Array.from(table.rows);
+
+            // Remove the current sorting indicator
+            const previousSortIndicator = document.querySelector(".sort-indicator");
+            if (previousSortIndicator) {
+                previousSortIndicator.parentNode.removeChild(previousSortIndicator);
+            }
+
+            // Get the index of the "Duration" column
+            const durationColumnIndex = Array.from(table.rows[0].cells).findIndex(cell => cell.id === "durationHeader");
+
+            // Sort the rows based on the duration values
+            rows.sort((a, b) => {
+                const durationA = parseInt(a.cells[durationColumnIndex].innerText);
+                const durationB = parseInt(b.cells[durationColumnIndex].innerText);
+                return durationA - durationB;
+            });
+
+            // Rebuild the table with sorted rows
+            const tbody = table.querySelector("tbody");
+            rows.forEach(row => tbody.appendChild(row));
+
+            // Add sorting indicator
+            const durationHeaderCell = document.getElementById("durationHeader");
+            durationHeaderCell.innerHTML += '<span class="sort-indicator">&#x25B2;</span>';
+        };
+
+        const sortTableByRating = () => {
+            const table = document.querySelector(".teams");
+            const rows = Array.from(table.rows);
+
+            // Remove the current sorting indicator
+            const previousSortIndicator = document.querySelector(".sort-indicator");
+            if (previousSortIndicator) {
+                previousSortIndicator.parentNode.removeChild(previousSortIndicator);
+            }
+
+            // Get the index of the "Rating" column
+            const ratingColumnIndex = Array.from(table.rows[0].cells).findIndex(cell => cell.innerText === "Rating");
+
+            // Sort the rows based on the rating values
+            rows.sort((a, b) => {
+                const ratingA = parseInt(a.cells[ratingColumnIndex].innerText);
+                const ratingB = parseInt(b.cells[ratingColumnIndex].innerText);
+                return ratingA - ratingB;
+            });
+
+            // Rebuild the table with sorted rows
+            const tbody = table.querySelector("tbody");
+            rows.forEach(row => tbody.appendChild(row));
+
+            // Add sorting indicator
+            const ratingHeaderCell = document.getElementById("ratingHeader");
+            ratingHeaderCell.innerHTML += '<span class="sort-indicator">&#x25B2;</span>';
         };
 
         const maybePlay = localStorage.getItem("play");
