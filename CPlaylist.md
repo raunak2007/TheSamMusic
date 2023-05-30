@@ -1,3 +1,5 @@
+**Look through our playlists and sort based on what you are looking for!**
+**We have **
 <html lang="en">
 <head>
     <title>Playlist Management</title>
