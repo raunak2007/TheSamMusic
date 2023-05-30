@@ -1,0 +1,1 @@
+# Click on one of the tabs above to get started with the SAM Music Software!

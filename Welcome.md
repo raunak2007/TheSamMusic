@@ -1,0 +1,1 @@
+## **Welcome to the SAM Music Software! This site is designed for users to search and create their favorite music playlists, give them an appropriate title, and post them for others to enjoy!**
