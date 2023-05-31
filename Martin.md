@@ -598,6 +598,144 @@
     <td>3:24</td>
     <td>2019</td>
 </tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=8kyWDhB_QeI">All Falls Down</a></td>
+    <td>Kanye West ft. Syleena Johnson</td>
+    <td>3:43</td>
+    <td>2004</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=p3L2uACuC9A">Graduation</a></td>
+    <td>Kanye West</td>
+    <td>1:23</td>
+    <td>2007</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=H5EvvswsNtI">Homecoming</a></td>
+    <td>Kanye West ft. Chris Martin</td>
+    <td>3:23</td>
+    <td>2007</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=VDj9QIhU1DY">Ransom</a></td>
+    <td>Lil Tecca</td>
+    <td>2:11</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=BCxnmd9zpw4">Love Me</a></td>
+    <td>Lil Tecca</td>
+    <td>2:06</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=iXYpYH0JFfw">Did It Again</a></td>
+    <td>Lil Tecca</td>
+    <td>2:18</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Molly Girl</a></td>
+    <td>Lil Tecca</td>
+    <td>1:58</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=DmMp-LSc4SM">Bossanova</a></td>
+    <td>Lil Tecca</td>
+    <td>2:15</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=hxwePvdHZeI">Out of Love</a></td>
+    <td>Lil Tecca</td>
+    <td>1:55</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=rLlU1gwF74E">Dolly</a></td>
+    <td>Lil Tecca</td>
+    <td>2:19</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=lG8fWx982Qs">Count Me Out</a></td>
+    <td>Lil Tecca</td>
+    <td>2:32</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=ImFP_U_YlR0">Sidenote</a></td>
+    <td>Lil Tecca</td>
+    <td>1:49</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=dgIxrAdFkeE">Shots</a></td>
+    <td>Lil Tecca</td>
+    <td>2:23</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=_P8S6l3cl3g">Royal Rumble</a></td>
+    <td>Lil Tecca</td>
+    <td>1:57</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=eIrCLI0p-2M">Weatherman</a></td>
+    <td>Lil Tecca</td>
+    <td>2:29</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=IFiVsR8cY9w">Our Time</a></td>
+    <td>Lil Tecca</td>
+    <td>2:18</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=zr_zvON_E9E">Love No Thotties</a></td>
+    <td>Lil Tecca</td>
+    <td>2:10</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=IOyM7Hv4vRo">No Answers</a></td>
+    <td>Lil Tecca</td>
+    <td>2:11</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=yTdXNGVo-g8">Somebody</a></td>
+    <td>Lil Tecca</td>
+    <td>2:21</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=dvFLxH3MMTA">Did It Again</a></td>
+    <td>Lil Tecca</td>
+    <td>2:33</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=Avptx2H2StI">Insecurities</a></td>
+    <td>Lil Tecca</td>
+    <td>2:18</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=52I0cK3iVVA">Closest to Heaven</a></td>
+    <td>Lil Tecca</td>
+    <td>2:25</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=1QFToqoFeLs">Seaside</a></td>
+    <td>Lil Tecca</td>
+    <td>1:46</td>
+    <td>2021</td>
+</tr>
 
 </table>
 
