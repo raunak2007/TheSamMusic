@@ -1,7 +1,7 @@
 **Look through our playlists and sort based on what you are looking for!**
 **We have playlists called...** 
 
-**Chill, Vibe, and Hype** 
+# **Chill, Vibe, and Hype** 
 
 **... starting looking through them to add to your own personal playlists!**
 <html lang="en">
@@ -9,7 +9,7 @@
     <title>Playlist Management</title>
 </head>
 <body>
-    <h1>Playlist Management</h1> 
+    <h1>Playlist Management</h1>
     <i>Enter the name of a playlist to get started</i>
     <input placeholder="Playlist" id="play" />
     <p>If you already have a saved playlist, enter its name above and hit "load playlist"</p>
@@ -18,12 +18,12 @@
         <tr>
             <th>ID</th>
             <th>Playlist</th>
+            <th>Title</th>
             <th id="durationHeader" onclick="sortTableByDuration()">Duration</th>
             <th>Year</th>
             <th id="ageHeader" onclick="sortTableByAge()">Age</th>
             <th id="ratingHeader" onclick="sortTableByRating()">Rating</th>
             <th>Artist</th>
-            <th>Title</th>
         </tr>
     </table>
     <hr />
@@ -115,12 +115,12 @@
                                     <tr>
                                         <td>${data.id}</td>
                                         <td>${data.playlist_name}</td>
+                                        <td>${data.title}</td>
                                         <td>${data.duration}</td>
                                         <td>${data.year}</td>
                                         <td>${data.age}</td>
                                         <td>${data.rating}</td>
                                         <td>${data.artist}</td>
-                                        <td>${data.title}</td>
                                     </tr>`;
                             });
                         } else {
