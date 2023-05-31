@@ -26,175 +26,579 @@
 
     <input type="text" id="searchInput" placeholder="Search for a song or artist...">
     
-  <table id="songTable">
+<table id="songTable">
     <tr>
         <th>Song</th>
         <th>Artist</th>
         <th>Duration</th>
         <th>Date</th>
     </tr>
-    <tr>
-        <td>Love Story</td>
-        <td>Taylor Swift</td>
-        <td>3:56</td>
-        <td>2008</td>
-    </tr>
-    <tr>
-        <td>Circles</td>
-        <td>Post Malone</td>
-        <td>3:34</td>
-        <td>2019</td>
-    </tr>
-    <tr>
-        <td>Roar</td>
-        <td>Katy Perry</td>
-        <td>3:42</td>
-        <td>2013</td>
-    </tr>
-    <tr>
-        <td>Sorry</td>
-        <td>Justin Bieber</td>
-        <td>3:20</td>
-        <td>2015</td>
-    </tr>
-    <tr>
-        <td>Drip Too Hard</td>
-        <td>Lil Baby</td>
-        <td>2:25</td>
-        <td>2018</td>
-    </tr>
-    <tr>
-        <td>Blank Space</td>
-        <td>Taylor Swift</td>
-        <td>3:51</td>
-        <td>2014</td>
-    </tr>
-    <tr>
-        <td>Rockstar</td>
-        <td>Post Malone</td>
-        <td>3:38</td>
-        <td>2017</td>
-    </tr>
-    <tr>
-        <td>Firework</td>
-        <td>Katy Perry</td>
-        <td>3:48</td>
-        <td>2010</td>
-    </tr>
-    <tr>
-        <td>Yummy</td>
-        <td>Justin Bieber</td>
-        <td>3:30</td>
-        <td>2020</td>
-    </tr>
-    <tr>
-        <td>Woah</td>
-        <td>Lil Baby</td>
-        <td>3:03</td>
-        <td>2020</td>
-    </tr>
-    <tr>
-        <td>Shake It Off</td>
-        <td>Taylor Swift</td>
-        <td>3:39</td>
-        <td>2014</td>
-    </tr>
-    <tr>
-        <td>Bad Blood</td>
-        <td>Taylor Swift</td>
-        <td>3:19</td>
-        <td>2014</td>
-    </tr>
-    <tr>
-        <td>Happier</td>
-        <td>Marshmello ft. Bastille</td>
-        <td>3:34</td>
-        <td>2018</td>
-    </tr>
-    <tr>
-        <td>Uptown Funk</td>
-        <td>Mark Ronson ft. Bruno Mars</td>
-        <td>4:30</td>
-        <td>2014</td>
-    </tr>
-    <tr>
-        <td>Havana</td>
-        <td>Camila Cabello ft. Young Thug</td>
-        <td>3:36</td>
-        <td>2017</td>
-    </tr>
-    <tr>
-        <td>Shape of You</td>
-        <td>Ed Sheeran</td>
-        <td>3:53</td>
-        <td>2017</td>
-    </tr>
-    <tr>
-        <td>Old Town Road</td>
-        <td>Lil Nas X ft. Billy Ray Cyrus</td>
-        <td>1:53</td>
-        <td>2019</td>
-    </tr>
-    <tr>
-        <td>Despacito</td>
-        <td>Luis Fonsi ft. Daddy Yankee</td>
-        <td>3:48</td>
-        <td>2017</td>
-    </tr>
-    <tr>
-        <td>Someone Like You</td>
-        <td>Adele</td>
-        <td>4:45</td>
-        <td>2011</td>
-    </tr>
-    <tr>
-        <td>Thinking Out Loud</td>
-        <td>Ed Sheeran</td>
-        <td>4:41</td>
-        <td>2014</td>
-    </tr>
-    <tr>
-        <td>Can't Stop the Feeling!</td>
-        <td>Justin Timberlake</td>
-        <td>3:56</td>
-        <td>2016</td>
-    </tr>
-    <tr>
-        <td>Love Story (Taylor's Version)</td>
-        <td>Taylor Swift</td>
-        <td>4:06</td>
-        <td>2021</td>
-    </tr>
-    <tr>
-        <td>You Belong with Me</td>
-        <td>Taylor Swift</td>
-        <td>3:51</td>
-        <td>2008</td>
-    </tr>
-    <tr>
-        <td>Blank Space (Acoustic)</td>
-        <td>Taylor Swift</td>
-        <td>3:53</td>
-        <td>2014</td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Taylor Swift</td>
-        <td>3:51</td>
-        <td>2014</td>
-    </tr>
-    <tr>
-        <td>Delicate</td>
-        <td>Taylor Swift</td>
-        <td>3:52</td>
-        <td>2017</td>
-    </tr>
-    <tr>
-        <td>Wildest Dreams</td>
-        <td>Taylor Swift</td>
-        <td>3:40</td>
-        <td>2014</td>
-    </tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=8xg3vE8Ie_E">Love Story</a></td>
+    <td>Taylor Swift</td>
+    <td>3:56</td>
+    <td>2008</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=th0cKJrFmFk">Circles</a></td>
+    <td>Post Malone</td>
+    <td>3:34</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=CevxZvSJLk8">Roar</a></td>
+    <td>Katy Perry</td>
+    <td>3:42</td>
+    <td>2013</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=fRh_vgS2dFE">Sorry</a></td>
+    <td>Justin Bieber</td>
+    <td>3:20</td>
+    <td>2015</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=75kTjG2ND3c">Drip Too Hard</a></td>
+    <td>Lil Baby</td>
+    <td>2:25</td>
+    <td>2018</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=e-ORhEE9VVg">Blank Space</a></td>
+    <td>Taylor Swift</td>
+    <td>3:51</td>
+    <td>2014</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=UceaB4D0jpo">Rockstar</a></td>
+    <td>Post Malone</td>
+    <td>3:38</td>
+    <td>2017</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=QGJuMBdaqIw">Firework</a></td>
+    <td>Katy Perry</td>
+    <td>3:48</td>
+    <td>2010</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=8EJ3zbKTWQ8">Yummy</a></td>
+    <td>Justin Bieber</td>
+    <td>3:30</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=YnVISwXViSU">Woah</a></td>
+    <td>Lil Baby</td>
+    <td>3:03</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=nfWlot6h_JM">Shake It Off</a></td>
+    <td>Taylor Swift</td>
+    <td>3:39</td>
+    <td>2014</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=QcIy9NiNbmo">Bad Blood</a></td>
+    <td>Taylor Swift</td>
+    <td>3:19</td>
+    <td>2014</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=m7Bc3pLyij0">Happier</a></td>
+    <td>Marshmello ft. Bastille</td>
+    <td>3:34</td>
+    <td>2018</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=OPf0YbXqDm0">Uptown Funk</a></td>
+    <td>Mark Ronson ft. Bruno Mars</td>
+    <td>4:30</td>
+    <td>2014</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=BQ0mxQXmLsk">Havana</a></td>
+    <td>Camila Cabello ft. Young Thug</td>
+    <td>3:36</td>
+    <td>2017</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=w2Ov5jzm3j8">Old Town Road</a></td>
+    <td>Lil Nas X ft. Billy Ray Cyrus</td>
+    <td>1:53</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=kJQP7kiw5Fk">Despacito</a></td>
+    <td>Luis Fonsi ft. Daddy Yankee</td>
+    <td>3:48</td>
+    <td>2017</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=hLQl3WQQoQ0">Someone Like You</a></td>
+    <td>Adele</td>
+    <td>4:45</td>
+    <td>2011</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=ru0K8uYEZWw">Can't Stop the Feeling!</a></td>
+    <td>Justin Timberlake</td>
+    <td>3:56</td>
+    <td>2016</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=8CdcCD5V-d8">Love Story (Taylor's Version)</a></td>
+    <td>Taylor Swift</td>
+    <td>4:06</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=8xg3vE8Ie_E">You Belong with Me</a></td>
+    <td>Taylor Swift</td>
+    <td>3:51</td>
+    <td>2008</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=8Af372EQLck">Blank Space (Acoustic)</a></td>
+    <td>Taylor Swift</td>
+    <td>3:53</td>
+    <td>2014</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=-CmadmM5cOk">Style</a></td>
+    <td>Taylor Swift</td>
+    <td>3:51</td>
+    <td>2014</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=WsptdUFthWI">Delicate</a></td>
+    <td>Taylor Swift</td>
+    <td>3:52</td>
+    <td>2017</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=IdneKLhsWOQ">Wildest Dreams</a></td>
+    <td>Taylor Swift</td>
+    <td>3:40</td>
+    <td>2014</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=IhP3J0j9JmY">Believer</a></td>
+    <td>Imagine Dragons</td>
+    <td>3:23</td>
+    <td>2017</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=uxpDa-c-4Mc">Hotline Bling</a></td>
+    <td>Drake</td>
+    <td>4:27</td>
+    <td>2015</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=zABLecsR5UE">Someone You Loved</a></td>
+    <td>Lewis Capaldi</td>
+    <td>3:02</td>
+    <td>2018</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=YrLk4vdY28Q">Hallelujah</a></td>
+    <td>Leonard Cohen</td>
+    <td>4:39</td>
+    <td>1984</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=ktvTqknDobU">Radioactive</a></td>
+    <td>Imagine Dragons</td>
+    <td>3:08</td>
+    <td>2012</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=rYEDA3JcQqw">Rolling in the Deep</a></td>
+    <td>Adele</td>
+    <td>3:49</td>
+    <td>2010</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=eDdI7GhZSQA">Hey Jude</a></td>
+    <td>The Beatles</td>
+    <td>7:11</td>
+    <td>1968</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ">Bohemian Rhapsody</a></td>
+    <td>Queen</td>
+    <td>5:55</td>
+    <td>1975</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=EqPtz5qN7HM">Hotel California</a></td>
+    <td>The Eagles</td>
+    <td>6:30</td>
+    <td>1976</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=xpVfcZ0ZcFM">God's Plan</a></td>
+    <td>Drake</td>
+    <td>3:18</td>
+    <td>2018</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=RIZdjT1472Y">One Dance</a></td>
+    <td>Drake ft. WizKid & Kyla</td>
+    <td>2:54</td>
+    <td>2016</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=TcaOYnDd3FE">In My Feelings</a></td>
+    <td>Drake</td>
+    <td>3:38</td>
+    <td>2018</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=EgBJmlPo8Xw">Hotline Bling</a></td>
+    <td>Drake</td>
+    <td>4:27</td>
+    <td>2015</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=hpRvjBwVWZw">Controlla</a></td>
+    <td>Drake</td>
+    <td>4:05</td>
+    <td>2016</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=LE6P8wq3l_4">Money In The Grave</a></td>
+    <td>Drake ft. Rick Ross</td>
+    <td>3:25</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=RubBzkZzpUA">Started From the Bottom</a></td>
+    <td>Drake</td>
+    <td>3:04</td>
+    <td>2013</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=hb8VmnsH4X4">Nonstop</a></td>
+    <td>Drake</td>
+    <td>3:58</td>
+    <td>2018</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=COpc1eZaabk">Passionfruit</a></td>
+    <td>Drake</td>
+    <td>4:58</td>
+    <td>2017</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=cimoNqiulUE">Headlines</a></td>
+    <td>Drake</td>
+    <td>3:56</td>
+    <td>2011</td>
+</tr>
+
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=0VR3dfZf9Yg">Emotionally Scarred</a></td>
+    <td>Lil Baby</td>
+    <td>3:17</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=WoF7DzQwKBE">Woah</a></td>
+    <td>Lil Baby</td>
+    <td>3:03</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=kcF4X7Jj9XQ">The Bigger Picture</a></td>
+    <td>Lil Baby</td>
+    <td>4:10</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=DkKPBToZVBw">On Me</a></td>
+    <td>Lil Baby</td>
+    <td>2:32</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=8pFvdG0wEM0">Sum 2 Prove</a></td>
+    <td>Lil Baby</td>
+    <td>3:23</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=KFDr2S6fEjc">We Paid</a></td>
+    <td>Lil Baby ft. 42 Dugg</td>
+    <td>2:50</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=0JMlW2paZnU">Close Friends</a></td>
+    <td>Lil Baby</td>
+    <td>3:23</td>
+    <td>2018</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=xN8or7VrZ1o">Freestyle</a></td>
+    <td>Lil Baby</td>
+    <td>2:43</td>
+    <td>2017</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=v2AC41dglnM">Yes Indeed</a></td>
+    <td>Lil Baby ft. Drake</td>
+    <td>2:22</td>
+    <td>2018</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=8j4CEfEw3_o">All In</a></td>
+    <td>Lil Baby</td>
+    <td>2:38</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=ZmDBbnmKpqQ">Drivers License</a></td>
+    <td>Olivia Rodrigo</td>
+    <td>4:02</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=8ZnU7aF0T0E">Deja Vu</a></td>
+    <td>Olivia Rodrigo</td>
+    <td>3:36</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=gNi_6U5Pm_o">Good 4 U</a></td>
+    <td>Olivia Rodrigo</td>
+    <td>2:58</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=W0LdEg2Sd3M">Brutal</a></td>
+    <td>Olivia Rodrigo</td>
+    <td>2:23</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=xJXJbD0OSg4">Traitor</a></td>
+    <td>Olivia Rodrigo</td>
+    <td>3:49</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=Q22DITf6w3s">Favorite Crime</a></td>
+    <td>Olivia Rodrigo</td>
+    <td>2:33</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=qiuNr0E4Wgk">Happier</a></td>
+    <td>Olivia Rodrigo</td>
+    <td>4:16</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=0Bf3CqbeSDU">Jealousy, Jealousy</a></td>
+    <td>Olivia Rodrigo</td>
+    <td>3:34</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=5OnTbL4oMWI">Enough for You</a></td>
+    <td>Olivia Rodrigo</td>
+    <td>3:20</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=sO0zljgSX2w">Hope Ur OK</a></td>
+    <td>Olivia Rodrigo</td>
+    <td>3:14</td>
+    <td>2021</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=JGwWNGJdvx8">Shape of You</a></td>
+    <td>Ed Sheeran</td>
+    <td>3:53</td>
+    <td>2017</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=LPnNUfvb6WY">Thinking Out Loud</a></td>
+    <td>Ed Sheeran</td>
+    <td>4:41</td>
+    <td>2014</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=9Gt__LQo7Xk">Photograph</a></td>
+    <td>Ed Sheeran</td>
+    <td>4:35</td>
+    <td>2014</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=t4Y1lUfH7Ig">Perfect</a></td>
+    <td>Ed Sheeran</td>
+    <td>4:23</td>
+    <td>2017</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=ABhDiXbUaBE">Castle on the Hill</a></td>
+    <td>Ed Sheeran</td>
+    <td>4:21</td>
+    <td>2017</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=eiDiKwbGfIY">The A Team</a></td>
+    <td>Ed Sheeran</td>
+    <td>4:50</td>
+    <td>2011</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=3tmd-ClpJxA">Galway Girl</a></td>
+    <td>Ed Sheeran</td>
+    <td>2:50</td>
+    <td>2017</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=Z1oN7O-4p_8">I Don't Care</a></td>
+    <td>Ed Sheeran & Justin Bieber</td>
+    <td>3:41</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=DYRg2AqzVjI">Don't</a></td>
+    <td>Ed Sheeran</td>
+    <td>3:39</td>
+    <td>2014</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=l9DhEX6RUW8">Bloodstream</a></td>
+    <td>Ed Sheeran</td>
+    <td>5:00</td>
+    <td>2014</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=Jg5wkZ-dJXA">Stronger</a></td>
+    <td>Kanye West</td>
+    <td>5:12</td>
+    <td>2007</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=1N3JUSJz8oA">Heartless</a></td>
+    <td>Kanye West</td>
+    <td>3:31</td>
+    <td>2008</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=PAt2m3V-GHQ">Gold Digger</a></td>
+    <td>Kanye West ft. Jamie Foxx</td>
+    <td>3:42</td>
+    <td>2005</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=HAfFfqiYLp0">Jesus Walks</a></td>
+    <td>Kanye West</td>
+    <td>3:13</td>
+    <td>2004</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=6vwNcNOTVzY">Stronger (Live from The Joint)</a></td>
+    <td>Kanye West</td>
+    <td>3:25</td>
+    <td>2008</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=6CHs4x2uqcQ">All of the Lights</a></td>
+    <td>Kanye West ft. Rihanna, Kid Cudi</td>
+    <td>5:00</td>
+    <td>2010</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=QGJuMBdaqIw">Stronger (Graduation)</a></td>
+    <td>Kanye West</td>
+    <td>5:12</td>
+    <td>2007</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=4B_UYYPb-Gk">Can't Tell Me Nothing</a></td>
+    <td>Kanye West</td>
+    <td>4:32</td>
+    <td>2007</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=p_RqWocthcc">Famous</a></td>
+    <td>Kanye West</td>
+    <td>3:16</td>
+    <td>2016</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=ohH2brF6-Uk">Black Skinhead</a></td>
+    <td>Kanye West</td>
+    <td>3:08</td>
+    <td>2013</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=X6foS0VtIOc">Bound 2</a></td>
+    <td>Kanye West</td>
+    <td>3:50</td>
+    <td>2013</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=8kyWDhB_QeI">Waves</a></td>
+    <td>Kanye West ft. Chris Brown</td>
+    <td>3:01</td>
+    <td>2016</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=Bm5iA4Zupek">Flashing Lights</a></td>
+    <td>Kanye West ft. Dwele</td>
+    <td>3:58</td>
+    <td>2007</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=7vCImzUzMw4">Touch the Sky</a></td>
+    <td>Kanye West ft. Lupe Fiasco</td>
+    <td>3:57</td>
+    <td>2006</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=kJv5D0Ca3G0">Ultralight Beam</a></td>
+    <td>Kanye West ft. Chance the Rapper</td>
+    <td>5:20</td>
+    <td>2016</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=_xk8UMIvKwU">Follow God</a></td>
+    <td>Kanye West</td>
+    <td>1:44</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=6RcqkP6n4hY">Closed on Sunday</a></td>
+    <td>Kanye West</td>
+    <td>2:34</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=LQ488QrqGE4">On God</a></td>
+    <td>Kanye West</td>
+    <td>2:36</td>
+    <td>2019</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=AgAQjsX02fM">Wash Us in the Blood</a></td>
+    <td>Kanye West ft. Travis Scott</td>
+    <td>3:10</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td><a href="https://www.youtube.com/watch?v=Pyazlxm02vI">God Is</a></td>
+    <td>Kanye West</td>
+    <td>3:24</td>
+    <td>2019</td>
+</tr>
+
 </table>
 
     <script>
