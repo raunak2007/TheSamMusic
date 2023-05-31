@@ -3,14 +3,15 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-       color: black;
+      background-color: #F0F0F0;
+      color: black;
     }
     .song-item {
       border: 1px solid #ccc;
       margin-bottom: 10px;
       padding: 10px;
       border-radius: 5px;
-      background-color: #f9f9f9;
+      background-color: #fff;
     }
     form {
       background-color: #f3f3f3;
@@ -59,7 +60,7 @@
   </style>
 </head>
 <body>
-  <h2>Add favorites here!</h2>
+  <h2>Add your favorites</h2>
   <form id="songForm">
     <label for="title">Title:</label>
     <input type="text" id="title" name="title">
@@ -67,35 +68,47 @@
     <input type="text" id="artist" name="artist">
     <label for="genre">Genre:</label>
     <input type="text" id="genre" name="genre">
-    <label for="length">Length (minutes):</label>
+    <label for="length">Length (in seconds):</label>
     <input type="number" id="length" name="length">
     <input type="submit" value="Add Song">
   </form>
 
-  <div id="songs"></div>
-
   <button onclick="sortAndSearch(sortByTitle)">Sort by Title</button>
   <button onclick="sortAndSearch(sortByArtist)">Sort by Artist</button>
   <button onclick="sortAndSearch(sortByGenre)">Sort by Genre</button>
-  <button onclick="sortAndSearch(sortByLength)">Sort by Length</button>
+
+  <div id="songs"></div>
+  <script id="songTemplate" type="text/template">
+    <div class="song-item">
+      <span>{title} by {artist}, Genre: {genre}, Length: {length}s</span>
+      <button class="add-to-playlist">Add to your playlists</button>
+    </div>
+  </script>
 
   <script>
     let songs = JSON.parse(localStorage.getItem('songs')) || [];
 
+    function displaySongs(songs) {
+      const songsDiv = document.getElementById('songs');
+      songsDiv.innerHTML = '';
+      const template = document.getElementById('songTemplate').innerText;
+      songs.forEach(song => {
+        const songDiv = document.createElement('div');
+        songDiv.innerHTML = template.replace('{title}', song.title).replace('{artist}', song.artist).replace('{genre}', song.genre).replace('{length}', song.length);
+        songDiv.querySelector('.add-to-playlist').addEventListener('click', function() {
+          addToPlaylist(song);
+        });
+        songsDiv.appendChild(songDiv);
+      });
+    }
+
+    function addToPlaylist(song) {
+      console.log('Adding song to playlist:', song);
+    }
+
     function addSong(song) {
       songs.push(song);
       localStorage.setItem('songs', JSON.stringify(songs));
-    }
-
-    function displaySongs(sortedSongs) {
-      const songsDiv = document.getElementById('songs');
-      songsDiv.innerHTML = '';
-      sortedSongs.forEach(song => {
-        const songDiv = document.createElement('div');
-        songDiv.classList.add('song-item');
-        songDiv.textContent = `${song.title} by ${song.artist}, Genre: ${song.genre}, Length: ${song.length} minutes`;
-        songsDiv.appendChild(songDiv);
-      });
     }
 
     function sortByTitle() {
@@ -110,15 +123,11 @@
       return [...songs].sort((a, b) => a.genre.localeCompare(b.genre));
     }
 
-    function sortByLength() {
-      return [...songs].sort((a, b) => a.length - b.length);
-    }
-
     function sortAndSearch(sortFunction) {
-      const searchText = prompt("Enter search text:");
+      const searchText = prompt("Enter search text:").toLowerCase();
       let sortedSongs = sortFunction();
       if (searchText !== null && searchText !== '') {
-        sortedSongs = sortedSongs.filter(song => song.title.includes(searchText) || song.artist.includes(searchText) || song.genre.includes(searchText));
+        sortedSongs = sortedSongs.filter(song => song.title.toLowerCase().includes(searchText) || song.artist.toLowerCase().includes(searchText) || song.genre.toLowerCase().includes(searchText));
       }
       displaySongs(sortedSongs);
     }
@@ -129,11 +138,10 @@
       const artist = document.getElementById('artist').value;
       const genre = document.getElementById('genre').value;
       const length = Number(document.getElementById('length').value);
-      addSong({ title, artist, genre, length });
+      addSong({title, artist, genre, length});
       displaySongs(songs);
     });
 
-    // Display the initial songs
     displaySongs(songs);
   </script>
 </body>
