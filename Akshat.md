@@ -60,7 +60,7 @@
   </style>
 </head>
 <body>
-  <h2>Add your favorites</h2>
+  <h2>Add a new song</h2>
   <form id="songForm">
     <label for="title">Title:</label>
     <input type="text" id="title" name="title">
@@ -73,9 +73,9 @@
     <input type="submit" value="Add Song">
   </form>
 
-  <button onclick="sortAndSearch(sortByTitle)">Sort by Title</button>
-  <button onclick="sortAndSearch(sortByArtist)">Sort by Artist</button>
-  <button onclick="sortAndSearch(sortByGenre)">Sort by Genre</button>
+  <button onclick="sortAndSearch(sortByTitle, 'title')">Sort by Title</button>
+  <button onclick="sortAndSearch(sortByArtist, 'artist')">Sort by Artist</button>
+  <button onclick="sortAndSearch(sortByGenre, 'genre')">Sort by Genre</button>
 
   <div id="songs"></div>
   <script id="songTemplate" type="text/template">
@@ -123,11 +123,11 @@
       return [...songs].sort((a, b) => a.genre.localeCompare(b.genre));
     }
 
-    function sortAndSearch(sortFunction) {
+    function sortAndSearch(sortFunction, searchField) {
       const searchText = prompt("Enter search text:").toLowerCase();
       let sortedSongs = sortFunction();
       if (searchText !== null && searchText !== '') {
-        sortedSongs = sortedSongs.filter(song => song.title.toLowerCase().includes(searchText) || song.artist.toLowerCase().includes(searchText) || song.genre.toLowerCase().includes(searchText));
+        sortedSongs = sortedSongs.filter(song => song[searchField].toLowerCase().includes(searchText));
       }
       displaySongs(sortedSongs);
     }
@@ -138,7 +138,7 @@
       const artist = document.getElementById('artist').value;
       const genre = document.getElementById('genre').value;
       const length = Number(document.getElementById('length').value);
-      addSong({title, artist, genre, length});
+      addSong({ title, artist, genre, length });
       displaySongs(songs);
     });
 
