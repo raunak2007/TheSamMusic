@@ -881,3 +881,54 @@
     </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Playlist</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>My Music Playlist</h1>
+  <input id="songInput" type="text" placeholder="Enter a song">
+  <button id="addButton">Add Song</button>
+  <ul id="playlist"></ul>
+
+  <script>
+    const playlist = document.getElementById('playlist');
+    const songInput = document.getElementById('songInput');
+    const addButton = document.getElementById('addButton');
+
+    // Fetch the playlist from the backend and display it
+    function fetchPlaylist() {
+      fetch('/playlist')
+        .then(response => response.json())
+        .then(data => {
+          playlist.innerHTML = '';
+          data.forEach(song => {
+            const li = document.createElement('li');
+            li.innerHTML = song;
+            playlist.appendChild(li);
+          });
+        });
+    }
+
+    // Add a song to the playlist
+    function addSong() {
+      const song = songInput.value;
+      fetch('/playlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ song })
+      })
+      .then(fetchPlaylist);
+    }
+
+    // Attach event listeners
+    addButton.addEventListener('click', addSong);
+
+    // Initial fetch to display the playlist
+    fetchPlaylist();
+  </script>
+</body>
+</html>
