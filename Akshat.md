@@ -60,7 +60,7 @@
   </style>
 </head>
 <body>
-  <h2>Add a new song</h2>
+  <h2>Add your favorites</h2>
   <form id="songForm">
     <label for="title">Title:</label>
     <input type="text" id="title" name="title">
